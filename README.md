@@ -9,12 +9,13 @@ python setup.py install
 
 === Add filter glpi ===
 /etc/fail2ban/filter.d/glpi.conf
+<code>
 [INCLUDES]
 before = common.conf
 [Definition]
 failregex =  Неудачная попытка входа пользователя \w+ с IP <HOST>
 ignoreregex =
-
+  </code>
 === Add new action and filter in jail.conf ===
 /etc/fail2ban/jail.conf
 [glpi]
